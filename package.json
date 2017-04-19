@@ -1,1 +1,40 @@
-{     "devDependencies": {         "happypack": "*",         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmtest-happypack",     "homepage": "https://github.com/npmtest/node-npmtest-happypack",     "repository": {         "type": "git",         "url": "https://github.com/npmtest/node-npmtest-happypack.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "#### basic test coverage for  [happypack (v3.0.3)](https://github.com/amireh/happypack#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-happypack.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-happypack) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-happypack.svg)](https://travis-ci.org/npmtest/node-npmtest-happypack)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "happypack": "*",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmtest/node-npmtest-happypack",
+    "keywords": [
+        "coverage",
+        "test",
+        "happypack"
+    ],
+    "license": "MIT",
+    "main": "lib.npmtest_happypack.js",
+    "name": "npmtest-happypack",
+    "nameAlias": "npmtest_happypack",
+    "nameOriginal": "npmtest-happypack",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmtest/node-npmtest-happypack.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}

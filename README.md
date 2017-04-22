@@ -1,6 +1,6 @@
 # npmtest-happypack
 
-#### basic test coverage for  [happypack (v3.0.3)](https://github.com/amireh/happypack#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-happypack.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-happypack) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-happypack.svg)](https://travis-ci.org/npmtest/node-npmtest-happypack)
+#### basic test-coverage for  [happypack (v3.0.3)](https://github.com/amireh/happypack#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-happypack.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-happypack) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-happypack.svg)](https://travis-ci.org/npmtest/node-npmtest-happypack)
 
 #### webpack speed booster, makes you happy!
 
@@ -111,7 +111,8 @@
         "test-examples": "./examples/build-all.sh",
         "test:coverage": "nyc npm test"
     },
-    "version": "3.0.3"
+    "version": "3.0.3",
+    "bin": {}
 }
 ```
 
